@@ -4,7 +4,7 @@ class CreateFoodReceivers < ActiveRecord::Migration[6.1]
       t.string :name
       t.string :location
       t.string :email
-      t.password_digest :password
+      t.string :password_digest
 
       t.timestamps
     end
