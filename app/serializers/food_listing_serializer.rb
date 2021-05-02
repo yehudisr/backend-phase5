@@ -1,6 +1,6 @@
 class FoodListingSerializer < ActiveModel::Serializer
 
-  attributes :name, :description, :amount, :start_time, :end_time, :start_time_display, :end_time_display  
+  attributes :name, :description, :amount, :start_time, :end_time, :start_time_display, :end_time_display, :id  
 
   # belongs_to :food_giver
   def start_time_display 
@@ -11,4 +11,5 @@ class FoodListingSerializer < ActiveModel::Serializer
     object.end_time.strftime('%I:%M %P')
   end
 
-end
+end .
+

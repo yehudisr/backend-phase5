@@ -10,4 +10,14 @@ class FoodGiversController < ApplicationController
         render json: @food_giver 
     end
 
+    def login 
+        @food_giver = FoodGiver.find_by(email: params[:email])
+        if @food_giver &&  @food_giver.password_digest === params[:password]
+            render json: @food_giver
+        else
+            render json: {errors: ["Invalid username or password"]}, status: :unauthorized
+        end 
+    end
+
+
 end
