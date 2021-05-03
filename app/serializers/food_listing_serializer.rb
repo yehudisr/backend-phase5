@@ -11,5 +11,5 @@ class FoodListingSerializer < ActiveModel::Serializer
     object.end_time.strftime('%I:%M %P')
   end
 
-end .
+end 
 
