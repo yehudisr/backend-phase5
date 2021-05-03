@@ -7,5 +7,8 @@ Rails.application.routes.draw do
   post '/login', to: 'food_givers#login'
   get '/food_givers/:id', to: 'food_givers#show'
 
+  post '/food_listings', to: 'food_listings#create'
+  delete '/food_listings/:id', to: 'food_listings#destroy'
+
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
