@@ -4,3 +4,4 @@ class FoodOrderSerializer < ActiveModel::Serializer
   belongs_to :food_receiver
   # belongs_to :food_listing
 end
+ 

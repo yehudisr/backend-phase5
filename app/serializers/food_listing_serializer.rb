@@ -5,7 +5,7 @@ class FoodListingSerializer < ActiveModel::Serializer
   
   
 
-  # belongs_to :food_giver
+  belongs_to :food_giver
   # def start_time_display 
   #   # byebug
   #  object.start_time.strftime('%A, %B %d | %I:%M %P')
