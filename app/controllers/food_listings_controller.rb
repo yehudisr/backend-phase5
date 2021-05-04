@@ -10,6 +10,16 @@ class FoodListingsController < ApplicationController
         render json: @food_listing 
     end
 
+    def amount_decrease 
+       
+        food_listing = FoodListing.find(params[:id])
+        new_amount = food_listing.decrement(:amount)
+       
+        food_listing.update({amount: new_amount.amount})
+        render json: food_listing
+    
+    end
+
 
     def destroy 
         food_listing = FoodListing.find(params[:id])
