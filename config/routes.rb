@@ -12,5 +12,7 @@ Rails.application.routes.draw do
 
   post '/order', to: 'food_receivers#order'
 
+  post '/food_orders', to: 'food_orders#create'
+
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
