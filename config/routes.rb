@@ -10,5 +10,7 @@ Rails.application.routes.draw do
   post '/food_listings', to: 'food_listings#create'
   delete '/food_listings/:id', to: 'food_listings#destroy'
 
+  post '/order', to: 'food_receivers#order'
+
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
