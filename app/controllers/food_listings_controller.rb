@@ -1,25 +1,15 @@
 class FoodListingsController < ApplicationController
 
     def index 
-        @food_listings = FoodListing.all 
+        @food_listings = FoodListing.order("created_at DESC")
         render json: @food_listings
     end
+        
 
     def create 
         @food_listing  = FoodListing.create(food_giver_id: params[:food_giver_id], name: params[:name], description: params[:description], amount: params[:amount], start_time: params[:start_time], end_time: params[:end_time])
         render json: @food_listing 
     end
-
-    # def amount_decrease 
-       
-    #     food_listing = FoodListing.find(params[:id])
-    #     new_amount = food_listing.decrement(:amount)
-       
-    #     food_listing.update({amount: new_amount.amount})
-    #     render json: food_listing
-    
-    # end
-
 
     def destroy 
         food_listing = FoodListing.find(params[:id])
