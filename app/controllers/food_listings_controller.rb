@@ -1,8 +1,11 @@
 class FoodListingsController < ApplicationController
 
     def index 
-        @food_listings = FoodListing.order("created_at DESC")
-        render json: @food_listings
+        
+        @today = FoodListing.where('start_time BETWEEN ? AND ?', DateTime.now.beginning_of_day, DateTime.now.end_of_day).all
+        # @food_listings = FoodListing.today?
+        # order("created_at DESC")
+        render json: @today
     end
         
 

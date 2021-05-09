@@ -12,4 +12,10 @@ class FoodListing < ApplicationRecord
 
   # @food_listings = FoodListing.where("created_at between (?) and (?)", start_time, end_time)
 
+  # def todays_listings
+  #   # FoodListing.all.select{|listing| listing.created_at == Time.now}
+  #   @today = FoodListing.where('start BETWEEN ? AND ?', DateTime.now.beginning_of_day, DateTime.now.end_of_day).all
+
+  # end
+
 end
