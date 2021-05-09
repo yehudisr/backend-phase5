@@ -3,9 +3,11 @@ Rails.application.routes.draw do
   resources :food_orders
   # resources :food_listings
   resources :food_givers
+  resources :sms_messages, only: [:create]
 
   post '/login', to: 'food_givers#login'
   get '/food_givers/:id', to: 'food_givers#show'
+  post '/signup', to: 'food_givers#create'
 
   get '/food_listings', to: 'food_listings#index'
   get '/food_listings/:id', to: 'food_listings#show'
@@ -16,6 +18,10 @@ Rails.application.routes.draw do
   post '/order', to: 'food_receivers#order'
 
   post '/food_orders', to: 'food_orders#create'
+
+
+ 
+
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

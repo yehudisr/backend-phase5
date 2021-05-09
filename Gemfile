@@ -17,8 +17,7 @@ gem 'puma', '~> 5.0'
 gem 'bcrypt', '~> 3.1.7'
 
 gem 'faker'
-
-gem 'active_period'
+gem 'twilio-ruby'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
