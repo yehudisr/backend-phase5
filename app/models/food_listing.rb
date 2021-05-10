@@ -18,4 +18,8 @@ class FoodListing < ApplicationRecord
 
   # end
 
+  def total_amount 
+     food_orders.count + amount 
+  end
+
 end

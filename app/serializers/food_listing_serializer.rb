@@ -1,6 +1,6 @@
 class FoodListingSerializer < ActiveModel::Serializer
 
-  attributes :name, :description, :amount, :start_time, :end_time, :id, :created_at 
+  attributes :name, :description, :amount, :start_time, :end_time, :id, :created_at, :total_amount 
   # :start_time_display, :end_time_display
   
   
