@@ -17,9 +17,15 @@ class FoodListing < ApplicationRecord
   #   @today = FoodListing.where('start BETWEEN ? AND ?', DateTime.now.beginning_of_day, DateTime.now.end_of_day).all
 
   # end
-
+  
   def total_amount 
      food_orders.count + amount 
   end
+  
+  # def self.all_listings_count
+    
+  #  FoodListing.all.sum{|listing| listing.total_amount}
+  # end
+
 
 end
