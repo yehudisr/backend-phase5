@@ -87,6 +87,7 @@ GEM
     faraday-net_http (1.0.1)
     faraday-net_http_persistent (1.1.0)
     ffi (1.15.0)
+    geocoder (1.6.7)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
     i18n (1.8.10)
@@ -181,6 +182,7 @@ DEPENDENCIES
   bootsnap (>= 1.4.4)
   byebug
   faker
+  geocoder (~> 1.6, >= 1.6.7)
   jsonapi-serializer
   listen (~> 3.3)
   pg (~> 1.1)

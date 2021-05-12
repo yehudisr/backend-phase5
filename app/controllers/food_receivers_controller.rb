@@ -18,4 +18,9 @@ class FoodReceiversController < ApplicationController
             render json: {errors: ["Invalid username or password"]}, status: :unauthorized
         end 
     end
+
+    def create 
+        @food_receiver = FoodReceiver.create(name: params[:name], email: params[:email], password_digest: params[:password], location: params[:location])
+        render json: @food_receiver 
+    end
 end

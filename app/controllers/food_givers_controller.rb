@@ -23,6 +23,7 @@ class FoodGiversController < ApplicationController
         @food_giver = FoodGiver.create(name: params[:name], email: params[:email], password_digest: params[:password], location: params[:location], category: params[:category])
         render json: @food_giver 
     end
+    
 
 
 end

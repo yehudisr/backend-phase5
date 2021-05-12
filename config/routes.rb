@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   get '/decrease/:id', to: 'food_listings#amount_decrease'
 
   post '/order', to: 'food_receivers#order'
+  post '/register', to: 'food_receivers#create'
 
   post '/food_orders', to: 'food_orders#create'
 
